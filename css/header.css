@@ -1,0 +1,208 @@
+.header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--white-color);
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: 40px auto 160px;
+    align-items: center;
+    grid-column-gap: 2.5vw;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+.header-logo img {
+    max-width: 25px;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-item {
+    margin: 0 1.5vw;
+    font-size: 0.933334rem;
+    position: relative;
+    font-weight: 400;
+}
+
+.header-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: var(--black-color);
+    bottom: -10px;
+    transition: var(--default-transition);
+}
+
+.header-item:hover::before {
+    width: 100%;
+}
+
+.user-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-item {
+    margin-left: 1vw;
+    font-size: 1.6rem;
+}
+
+.mobile-search {
+    display: none;
+}
+
+.cart-popup-count {
+    position: absolute;
+    font-size: 0.6rem;
+    top: 0;
+    right: -5px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-frame {
+    visibility: hidden;
+    top: 69px;
+    right: -120%;
+    transition: right 0.2s linear;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+}
+
+.blur {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    background-color: var(--dark-background);
+}
+
+.blur.active {
+    display: block;
+}
+
+.bottom-menu {
+    display: none;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .header-wrapper {
+        grid-template-columns: 1fr auto auto;
+    }
+    .header-logo {
+        width: fit-content;
+    }
+    .header-logo img {
+        max-width: 20px;
+    }
+    .header-nav {
+        display: none;
+    }
+    .user-nav {
+        display: none;
+    }
+    .menu-btn {
+        width: 30px;
+        height: 30px;
+    }
+    .menu-btn::before, .menu-btn::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: var(--black-color);
+        right: 0;
+        top: 50%;
+        transition: transform 0.2s linear;
+    }
+    .menu-btn::before {
+        transform: translateY(-5px) rotateZ(0);
+    }
+    .menu-btn::after {
+        transform: translateY(3px) rotateZ(0);
+    }
+    .menu-btn.active::before {
+        transform: translateY(-2px) rotateZ(45deg);
+    }
+    .menu-btn.active::after {
+        transform: translateY(-2px) rotateZ(-45deg);
+    }
+    .bottom-menu {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--white-color);
+        z-index: 100;
+        border-radius: 20px 20px 0 0;
+        padding: 20px 0;
+        box-shadow: 0 15px 20px 10px rgba(34, 60, 80, 0.2);
+    }
+    .bottom-menu-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-frame.active {
+        right: 0;
+        visibility: visible;
+    }
+    .header::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+    }
+    .header.active::before {
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav-frame-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-frame-item a {
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .nav-frame-item .arrow {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-wrapper {
+        grid-column-gap: 30px;
+    }
+}

@@ -1,0 +1,132 @@
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --alto-color: #dddddd;
+    --alabaster-color: #f8f8f8;
+    --mineshaft-color: #333333;
+    --silver-color: #BDBDBD;
+    --concrete-color: #f3f3f3;
+    --dove-color: #666666;
+    --red-color: #CA0D0D;
+    --family-font: 'Normalidadd', 'Helvetica Neue', sans-serif;
+    --default-transition: all 0.2s linear;
+    --dark-background: rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    padding: 10px 25px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+html {
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    font-family: var(--family-font);
+    background-color: var(--white-color);
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--black-color);
+    position: relative;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: block;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.enter-btn {
+    padding: 20px 50px;
+    text-transform: uppercase;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.2s linear;
+    text-align: center;
+}
+
+.enter--black {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.enter--white {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+}
+
+.enter--black:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+}
+
+.enter--white:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+@media only screen and (max-width: 960px) {
+    html {
+        font-size: 14px;
+    }
+    .wrapper {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 13px;
+    }
+}

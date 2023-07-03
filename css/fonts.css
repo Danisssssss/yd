@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Thin'), local('Helvetica-Neue-Thin'),
+        url('../fonts/HelveticaNeueCyr-Thin.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Roman'), local('Helvetica-Neue-Roman'),
+        url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Medium'), local('Helvetica-Neue-Medium'),
+        url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Light'), local('Helvetica-Neue-Light'),
+        url('../fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Heavy'), local('Helvetica-Neue-Heavy'),
+        url('../fonts/HelveticaNeueCyr-Heavy.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Heavy.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Bold'), local('Helvetica-Neue-Bold'),
+        url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue Black'), local('Helvetica-Neue-Black'),
+        url('../fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Black.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Extended Var'), local('NormalidadExtended-Thin'),
+        url('../fonts/NormalidadExtended-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadExtended-Thin.woff2') format('woff2'),
+        url('../fonts/NormalidadExtended-Thin.woff') format('woff'),
+        url('../fonts/NormalidadExtended-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Bold Var'), local('NormalidadCompact-Bold'),
+        url('../fonts/NormalidadCompact-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Bold.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Bold.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Compact Var'), local('NormalidadCompact-Thin'),
+        url('../fonts/NormalidadCompact-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Thin.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Thin.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Black Var'), local('NormalidadCompact-Black'),
+        url('../fonts/NormalidadCompact-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Black.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Black.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad UltraExtended Var'), local('NormalidadUltraExtended-Thin'),
+        url('../fonts/NormalidadUltraExtended-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadUltraExtended-Thin.woff2') format('woff2'),
+        url('../fonts/NormalidadUltraExtended-Thin.woff') format('woff'),
+        url('../fonts/NormalidadUltraExtended-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Wide Var'), local('NormalidadWide-Thin'),
+        url('../fonts/NormalidadWide-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadWide-Thin.woff2') format('woff2'),
+        url('../fonts/NormalidadWide-Thin.woff') format('woff'),
+        url('../fonts/NormalidadWide-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Light Var'), local('NormalidadCompact-Light'),
+        url('../fonts/NormalidadCompact-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Light.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Light.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Medium Var'), local('NormalidadCompact-Medium'),
+        url('../fonts/NormalidadCompact-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Medium.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Medium.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Text Var'), local('NormalidadText-Thin'),
+        url('../fonts/NormalidadText-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadText-Thin.woff2') format('woff2'),
+        url('../fonts/NormalidadText-Thin.woff') format('woff'),
+        url('../fonts/NormalidadText-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Var'), local('NormalidadVar-Regular'),
+        url('../fonts/NormalidadVar-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadVar-Regular.woff2') format('woff2'),
+        url('../fonts/NormalidadVar-Regular.woff') format('woff'),
+        url('../fonts/NormalidadVar-Regular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Thin Var'), local('NormalidadCompact-Thin'),
+        url('../fonts/NormalidadCompact-Thin_1.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Thin_1.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Thin_1.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Thin_1.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Normalidadd';
+    src: local('Normalidad Regular Var'), local('NormalidadCompact-Regular'),
+        url('../fonts/NormalidadCompact-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NormalidadCompact-Regular.woff2') format('woff2'),
+        url('../fonts/NormalidadCompact-Regular.woff') format('woff'),
+        url('../fonts/NormalidadCompact-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
