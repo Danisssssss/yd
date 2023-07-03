@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <title>Часто задоваемые вопросы о магазине YD</title>
+</head>
+<body id="body">
+    <div class="page">
+
+        <header id="header" class="header">
+            <div class="header-menu">
+                <div class="wrapper">
+                    <div class="header-wrapper">
+                        <a href="index.html" class="logo header-logo">
+                            <img src="images/logo.svg" alt="">
+                        </a>
+                        <div class="header-nav">
+                            <ul class="header-list">
+                                <li class="header-item">
+                                    <a href="shoes.html">Обувь</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="clothes.html">Одежда</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="accessories.html">Аксессуары</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="collections.html">Коллекции</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user-nav">
+                            <a href="wishlist.html" class="user-item uil uil-fire"></a>
+                            <a href="#" class="user-item uil uil-search search-popup-btn"></a>
+                            <a href="#" class="user-item uil uil-user authorization-popup-btn"></a>
+                            <a id="openCartPopupButton" href="#" class="user-item cart-popup-btn">
+                                <span class="uil uil-shopping-bag"></span>
+                                <span class="cart-popup-count">0</span>
+                            </a>
+                        </div>
+                        <a href="#" class="mobile-search uil uil-search search-popup-btn"></a>
+                        <div id="menuBtn" class="menu-btn"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="navFrame" class="nav-frame">
+                <div class="wrapper">
+                    <ul class="nav-frame-list">
+                        <li class="nav-frame-item">
+                            <a href="shoes.html">Обувь</a>
+                            <a href="shoes.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                        <li class="nav-frame-item">
+                            <a href="clothes.html">Одежда</a>
+                            <a href="clothes.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                        <li class="nav-frame-item">
+                            <a href="accessories.html">Аксессуары</a>
+                            <a href="accessories.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                        <li class="nav-frame-item">
+                            <a href="collections.html">Коллекции</a>
+                            <a href="collections.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="blur" class="blur"></div>
+    
+            <div id="searchPopup" class="search-popup">
+                <div class="wrapper">
+                    <div class="search-text">
+                        <h3 class="search-title">Поиск</h3>
+                        <button class="search-close">закрыть</button>
+                    </div>
+                    <form class="search-form">
+                        <div class="search-group">
+                            <input type="text" placeholder="Поиск" class="search-input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="cartPopup" class="cart-popup">
+                <div class="cart-popup-content">
+                    <div class="cart-popup-top">
+                        <h3 class="cart-popup-top-title">Корзина</h3>
+                        <button id="closeCartPopupButton" class="uil uil-multiply cart-popup-top-close"></button>
+                    </div>
+                    <div class="cart-popup-middle">
+                        <div class="cart-popup-wrapper"></div>
+                    </div>
+                    <div class="cart-popup-bottom">
+                        <div class="cart-popup-finalprice">
+                            <span class="cart-popup-finalprice__text">итого:</span>
+                            <span class="cart-popup-finalprice__value">0</span>
+                        </div>
+                        <a href="cart.html" class="btn cart-popup-finalprice__btn">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bottom-menu">
+                <div class="wrapper">
+                    <div class="bottom-menu-nav">
+                        <a href="#" class="user-item uil uil-user authorization-popup-btn"></a>
+                        <a href="wishlist.html" class="user-item uil uil-fire"></a>
+                        <a href="#" class="user-item uil uil-shopping-bag cart-popup-btn"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="information">
+            <div class="wrapper">
+                <div class="information-title">FAQ</div>
+                <div class="information-block">
+                    <div class="information-block-title">Общие вопросы</div>
+                    <div class="acc-block">
+                        <div class="acc-head">
+                            <h4>Чем занимается ваш интернет-магазин</h4>
+                            <div class="acc-ico">
+                                <i class="uil uil-plus"></i>
+                            </div>
+                        </div>
+                        <div class="acc-body">
+                            Мы первые в России, кто начал заниматься поиском и продажей лимитированных кроссовок и вещей для широкой аудитории. Мы стремимся сделать кроссовки более доступными для всех потребителей, и верим,что для каждого найдется пара, независимо от бренда, стиля, размера и функции.
+                        </div>
+                    </div>
+
+                    <div class="acc-block">
+                        <div class="acc-head">
+                            <h4>Гарантирована ли безопасность моих данных?</h4>
+                            <div class="acc-ico">
+                                <i class="uil uil-plus"></i>
+                            </div>
+                        </div>
+                        <div class="acc-body">
+                            Мы гарантируем полную безопасность ваших персональных данных. Если у вас есть вопросы, пожалуйста, ознакомьтесь с нашей Политикой конфиденциальности.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="information-block">
+                    <div class="information-block-title">Товары</div>
+                    <div class="acc-block">
+                        <div class="acc-head">
+                            <h4>Вы реализуете оригинальные товары?</h4>
+                            <div class="acc-ico">
+                                <i class="uil uil-plus"></i>
+                            </div>
+                        </div>
+                        <div class="acc-body">
+                            Мы продаем только новые и 100% оригинальные товары. Мы не принимаем и не работаем с подделками, товарами с «серого рынка» или заводскими вариантами. Мы гарантируем подлинность каждого проданного товара. Каждый из товаров, представленных в NE, проходит тщательную проверку подлинности нашими экспертами.
+                        </div>
+                    </div>
+
+                    <div class="acc-block">
+                        <div class="acc-head">
+                            <h4>В Вашем магазине представлены новые товары?</h4>
+                            <div class="acc-ico">
+                                <i class="uil uil-plus"></i>
+                            </div>
+                        </div>
+                        <div class="acc-body">
+                            Мы продаём только новые оригинальные товары в их первозданном состоянии.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-content">
+                    <div class="col nav-col">
+                        <div class="col-block">
+                            <div class="col-block-head">
+                                <h4>Разделы</h4>
+                            </div>
+                            <div class="col-block-body">
+                                <ul>
+                                    <li>
+                                        <a href="shoes.html">Обувь</a>
+                                    </li>
+                                    <li>
+                                        <a href="clothes.html">Одежда</a>
+                                    </li>
+                                    <li>
+                                        <a href="accessories.html">Аксессуары</a>
+                                    </li>
+                                    <li>
+                                        <a href="collections.html">Коллекции</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col nav-col">
+                        <div class="col-block">
+                            <div class="col-block-head">
+                                <h4>Информация</h4>
+                            </div>
+                            <div class="col-block-body">
+                                <ul>
+                                    <li>
+                                        <a href="contacts.html">Контакты</a>
+                                    </li>
+                                    <li>
+                                        <a href="delivery.html">Доставка</a>
+                                    </li>
+                                    <li>
+                                        <a href="payment.html">Оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="return.html">Возврат</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col nav-col">
+                        <div class="col-block">
+                            <div class="col-block-head">
+                                <h4>Контакты</h4>
+                            </div>
+                            <div class="col-block-body">
+                                <ul>
+                                    <li>
+                                        <p>Часы работы (с 11:00 до 22:00)</p>
+                                        <p>email@mail.ru</p>
+                                        <a href="tel:89999999999">8 (999) 999-99-99</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col social-col">
+                        <a href="#" class="uil uil-vk"></a>
+                        <a href="#" class="uil uil-instagram-alt"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MODAL -->
+    
+        <div id="modalSocialOpen" class="modal-social-open">
+            <img src="images/contact.png" alt="">
+        </div>
+        <!-- Modal Social -->
+        <div id="modalSocial" class="modal-social">
+            <!-- Modal content -->
+            <div class="modal-social-content">
+                <div class="close">
+                    <i class="uil uil-multiply"></i>
+                </div>
+                <div class="modal-social-text">
+                    <h3 class="modal-social-title">Мы на связи в мессенджерах</h3>
+                    <div class="modal-social-mes">
+                        <div class="modal-social-item">
+                            <div class="modal-social-item-icon">
+                                <img src="images/social/whatsapp-icon.svg" alt="">
+                            </div>
+                            <h4 class="modal-social-item-title">Whatsapp</h4>
+                            <button class="enter-btn enter--white modal-social-item-btn">Написать в Whatsapp</button>
+                        </div>
+                        <div class="modal-social-item">
+                            <div class="modal-social-item-icon">
+                                <img src="images/social/telegram-icon.svg" alt="">
+                            </div>
+                            <h4 class="modal-social-item-title">Телеграмм</h4>
+                            <button class="enter-btn enter--black modal-social-item-btn">Написать в Телеграмм</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Authorization -->
+        <div id="modalAuthorizationOpen" class="modal-authorization-open">
+            <a href="#">войти</a>
+        </div>
+
+        <div id="modalAuthorization" class="modal-authorization">
+            <!-- Modal content -->
+            <div class="modal-authorization-content">
+                <div class="close">
+                    <i class="uil uil-multiply"></i>
+                </div>
+                <h3 class="modal-authorization-title">Войдите в личный кабинет</h3>
+                <div class="modal-authorization-descr">Зарегистрированным пользователям доступен личный кабинет с историей заказов, возможностью сохранения адресов и добавления товаров в избранное</div>
+                <input data-tel-input type="text" class="modal-authorization-input" placeholder="+7">
+                <div class="modal-authorization-btn enter-btn enter--black">Войти</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bde4775b-48d5-4f83-b122-201987d2a3cb&lang=ru_RU"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/phoneMask/mask.js"></script>
+    <script src="js/phoneMask/mask_list.js"></script>
+    <script src="js/acc.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <title>Условия возврата в магазине YD</title>
+</head>
+<body id="body">
+    <div class="page">
+
+        <header id="header" class="header">
+            <div class="header-menu">
+                <div class="wrapper">
+                    <div class="header-wrapper">
+                        <a href="index.html" class="logo header-logo">
+                            <img src="images/logo.svg" alt="">
+                        </a>
+                        <div class="header-nav">
+                            <ul class="header-list">
+                                <li class="header-item">
+                                    <a href="shoes.html">Обувь</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="clothes.html">Одежда</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="accessories.html">Аксессуары</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="collections.html">Коллекции</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user-nav">
+                            <a href="wishlist.html" class="user-item uil uil-fire"></a>
+                            <a href="#" class="user-item uil uil-search search-popup-btn"></a>
+                            <a href="#" class="user-item uil uil-user authorization-popup-btn"></a>
+                            <a id="openCartPopupButton" href="#" class="user-item cart-popup-btn">
+                                <span class="uil uil-shopping-bag"></span>
+                                <span class="cart-popup-count">0</span>
+                            </a>
+                        </div>
+                        <a href="#" class="mobile-search uil uil-search search-popup-btn"></a>
+                        <div id="menuBtn" class="menu-btn"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="navFrame" class="nav-frame">
+                <div class="wrapper">
+                    <ul class="nav-frame-list">
+                        <li class="nav-frame-item">
+                            <a href="shoes.html">Обувь</a>
+                            <a href="shoes.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                        <li class="nav-frame-item">
+                            <a href="clothes.html">Одежда</a>
+                            <a href="clothes.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                        <li class="nav-frame-item">
+                            <a href="accessories.html">Аксессуары</a>
+                            <a href="accessories.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                        <li class="nav-frame-item">
+                            <a href="collections.html">Коллекции</a>
+                            <a href="collections.html" class="arrow uil uil-angle-right"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="blur" class="blur"></div>
+    
+            <div id="searchPopup" class="search-popup">
+                <div class="wrapper">
+                    <div class="search-text">
+                        <h3 class="search-title">Поиск</h3>
+                        <button class="search-close">закрыть</button>
+                    </div>
+                    <form class="search-form">
+                        <div class="search-group">
+                            <input type="text" placeholder="Поиск" class="search-input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="cartPopup" class="cart-popup">
+                <div class="cart-popup-content">
+                    <div class="cart-popup-top">
+                        <h3 class="cart-popup-top-title">Корзина</h3>
+                        <button id="closeCartPopupButton" class="uil uil-multiply cart-popup-top-close"></button>
+                    </div>
+                    <div class="cart-popup-middle">
+                        <div class="cart-popup-wrapper"></div>
+                    </div>
+                    <div class="cart-popup-bottom">
+                        <div class="cart-popup-finalprice">
+                            <span class="cart-popup-finalprice__text">итого:</span>
+                            <span class="cart-popup-finalprice__value">0</span>
+                        </div>
+                        <a href="cart.html" class="btn cart-popup-finalprice__btn">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bottom-menu">
+                <div class="wrapper">
+                    <div class="bottom-menu-nav">
+                        <a href="#" class="user-item uil uil-user authorization-popup-btn"></a>
+                        <a href="wishlist.html" class="user-item uil uil-fire"></a>
+                        <a href="#" class="user-item uil uil-shopping-bag cart-popup-btn"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="information">
+            <div class="wrapper">
+                <div class="information-title">Возврат</div>
+                <div class="information-block">
+                    <div class="acc-block">
+                        <div class="acc-head">
+                            <h4>Условия возврата</h4>
+                            <div class="acc-ico">
+                                <i class="uil uil-plus"></i>
+                            </div>
+                        </div>
+                        <div class="acc-body">
+                            <p>
+                                Для возврата/обмена Товара Покупатель обязан отправить возвращаемый/обмениваемый Товар почтовым отправлением по следующему по адресу: 111111, Город, Улица 1/1, тел.: 8 (999) 999-99-99.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                Перед отправкой обмена/возврата Покупатель обязан уведомить Продавца, написав письмо на email@mail.ru
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                К заказу на возврат/обмен должны быть приложен чек и товарная накладная.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                При отправке почтовым отправлением либо курьерской службой возврат/обмен оформляется в виде посылки с описью вложения с отметкой «Возврат товара»/ «Обмен товара».
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                Отправка посылки с возвращаемым/обмениваемым товаром осуществляется за счет Покупателя.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                Продавец вправе в течение 10 рабочих дней с момента возврата товара ненадлежащего качества провести проверку его качества.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                В случае, если Покупатель отказывается от товара надлежащего качества, Продавец возвращает денежные средства в течение 10 дней с момента получения возвращаемого Товара. Покупатель не вправе отказаться от Товара надлежащего качества, имеющего индивидуально-определенные свойства, если указанный Товар может быть использован исключительно приобретающим его потребителем.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                Возврат денежных средств может быть осуществлен одним из следующих способов:
+                            </p>
+                            <p><br></p>
+                            <p>
+                                - перечисление на расчетный счет, указанный Покупателем в Заявлении на возврат;
+                            </p>
+                            <p><br></p>
+                            <p>
+                                - путем перечисления на расчетный счет Покупателя, с которого производилась оплата (в случае оплаты банковской картой на Сайте);
+                            </p>
+                            <p><br></p>
+                            <p>
+                                - наличными средствами, если оплата была осуществлена наличными средствами.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                Для возврата денежных средств на банковскую карту Покупателю необходимо заполнить «Заявление о возврате денежных средств», которое высылается по требованию Продавца на электронный адрес Покупателя, и оправить его вместе с приложением копии паспорта по адресу email@mail.ru. Возврат денежных средств будет осуществлен на банковский счет Покупателя, указанный в заявлении, в течение 10 (Десяти) рабочих дней со дня получения «Заявление о возврате денежных средств» Продавцом.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                Возврат наличных денежных средств осуществляется только лицу, приобретавшему товар, либо лицу, уполномоченному на получение денежных средств нотариально удостоверенной доверенностью.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                В любом случае при оплате банковской картой на Сайте возврат денежных средств производится на тот же расчетный счет, с которого производилась оплата.
+                            </p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>
+                                В случае, если Покупатель отказывается от товара ненадлежащего качества, Продавец возвращает денежные средства в течение 10 дней с момента завершения проверки (если она проводится) качества при условии, что выводы проверки подтверждают наличие производственных дефектов. Замена товара ненадлежащего качества производится в течение 7 дней с момента предъявления требования Покупателя, а при необходимости дополнительной проверки качества товара - в течение 20 дней со дня предъявления указанного требования. Если у Продавца в момент предъявления требования отсутствует необходимый для замены товар, замена производится в течение месяца со дня предъявления такого требования. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-content">
+                    <div class="col nav-col">
+                        <div class="col-block">
+                            <div class="col-block-head">
+                                <h4>Разделы</h4>
+                            </div>
+                            <div class="col-block-body">
+                                <ul>
+                                    <li>
+                                        <a href="shoes.html">Обувь</a>
+                                    </li>
+                                    <li>
+                                        <a href="clothes.html">Одежда</a>
+                                    </li>
+                                    <li>
+                                        <a href="accessories.html">Аксессуары</a>
+                                    </li>
+                                    <li>
+                                        <a href="collections.html">Коллекции</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col nav-col">
+                        <div class="col-block">
+                            <div class="col-block-head">
+                                <h4>Информация</h4>
+                            </div>
+                            <div class="col-block-body">
+                                <ul>
+                                    <li>
+                                        <a href="contacts.html">Контакты</a>
+                                    </li>
+                                    <li>
+                                        <a href="delivery.html">Доставка</a>
+                                    </li>
+                                    <li>
+                                        <a href="payment.html">Оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="return.html">Возврат</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col nav-col">
+                        <div class="col-block">
+                            <div class="col-block-head">
+                                <h4>Контакты</h4>
+                            </div>
+                            <div class="col-block-body">
+                                <ul>
+                                    <li>
+                                        <p>Часы работы (с 11:00 до 22:00)</p>
+                                        <p>email@mail.ru</p>
+                                        <a href="tel:89999999999">8 (999) 999-99-99</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col social-col">
+                        <a href="#" class="uil uil-vk"></a>
+                        <a href="#" class="uil uil-instagram-alt"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MODAL -->
+    
+        <div id="modalSocialOpen" class="modal-social-open">
+            <img src="images/contact.png" alt="">
+        </div>
+        <!-- Modal Social -->
+        <div id="modalSocial" class="modal-social">
+            <!-- Modal content -->
+            <div class="modal-social-content">
+                <div class="close">
+                    <i class="uil uil-multiply"></i>
+                </div>
+                <div class="modal-social-text">
+                    <h3 class="modal-social-title">Мы на связи в мессенджерах</h3>
+                    <div class="modal-social-mes">
+                        <div class="modal-social-item">
+                            <div class="modal-social-item-icon">
+                                <img src="images/social/whatsapp-icon.svg" alt="">
+                            </div>
+                            <h4 class="modal-social-item-title">Whatsapp</h4>
+                            <button class="enter-btn enter--white modal-social-item-btn">Написать в Whatsapp</button>
+                        </div>
+                        <div class="modal-social-item">
+                            <div class="modal-social-item-icon">
+                                <img src="images/social/telegram-icon.svg" alt="">
+                            </div>
+                            <h4 class="modal-social-item-title">Телеграмм</h4>
+                            <button class="enter-btn enter--black modal-social-item-btn">Написать в Телеграмм</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Authorization -->
+        <div id="modalAuthorizationOpen" class="modal-authorization-open">
+            <a href="#">войти</a>
+        </div>
+
+        <div id="modalAuthorization" class="modal-authorization">
+            <!-- Modal content -->
+            <div class="modal-authorization-content">
+                <div class="close">
+                    <i class="uil uil-multiply"></i>
+                </div>
+                <h3 class="modal-authorization-title">Войдите в личный кабинет</h3>
+                <div class="modal-authorization-descr">Зарегистрированным пользователям доступен личный кабинет с историей заказов, возможностью сохранения адресов и добавления товаров в избранное</div>
+                <input data-tel-input type="text" class="modal-authorization-input" placeholder="+7">
+                <div class="modal-authorization-btn enter-btn enter--black">Войти</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=bde4775b-48d5-4f83-b122-201987d2a3cb&lang=ru_RU"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/phoneMask/mask.js"></script>
+    <script src="js/phoneMask/mask_list.js"></script>
+    <script src="js/acc.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
