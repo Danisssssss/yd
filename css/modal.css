@@ -196,7 +196,7 @@
 
 @media only screen and (max-width: 960px) {
     .modal-social-open {
-        bottom: 44px;
+        bottom: 50px;
         right: 20%;
         z-index: 100;
     }
