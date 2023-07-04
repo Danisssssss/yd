@@ -109,10 +109,7 @@ menuBtn.onclick = function() {
   body.classList.toggle('no-scroll');
 }
 
-
-
-
-window.onclick = function(event) {
+function clickHandler(event) {
   if (event.target == modalAuthorization) {
     modalAuthorization.classList.remove('active');
   }
@@ -132,6 +129,31 @@ window.onclick = function(event) {
     body.classList.remove('no-scroll');
   }
 }
+
+// Добавляем слушатель события клика для всего документа
+document.addEventListener('click', clickHandler);
+
+
+// window.onclick = function(event) {
+//   if (event.target == modalAuthorization) {
+//     modalAuthorization.classList.remove('active');
+//   }
+
+//   if (event.target == modalSocial) {
+//     modalSocial.classList.remove('active');
+//   }
+
+//   if (event.target == blur) {
+//     searchPopup.classList.remove('active'); // И для самого окна
+//     blur.classList.remove('active');
+//     body.classList.remove('no-scroll');
+//   }
+
+//   if (event.target == cartPopup) {
+//     cartPopup.classList.remove('active');
+//     body.classList.remove('no-scroll');
+//   }
+// }
 
 
 // 
