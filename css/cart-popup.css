@@ -10,7 +10,6 @@
     -webkit-backdrop-filter: blur(20px);
     background-color: var(--dark-background);
     text-transform: uppercase;
-    cursor: pointer;
 }
 
 .cart-popup.active {
