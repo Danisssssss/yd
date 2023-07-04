@@ -20,7 +20,7 @@ function init(){
         `
     }, {
 			iconLayout: 'default#image',
-			iconImageHref: '../images/location-pin.png',
+			iconImageHref: '../../images/location-pin.png',
 			iconImageSize: [40, 50],
 			iconImageOffset: [-20, -50],
 		}
@@ -37,7 +37,7 @@ function init(){
         `
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../images/location-pin.png',
+        iconImageHref: './images/location-pin.png',
         iconImageSize: [40, 50],
         iconImageOffset: [-20, -50],
     }
