@@ -12,6 +12,7 @@
     background-color: var(--dark-background);
     transition: opacity .1s linear;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .modal-social.active {
@@ -136,6 +137,7 @@
     background-color: var(--dark-background);
     transition: opacity .1s linear;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .modal-authorization.active {

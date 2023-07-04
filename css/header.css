@@ -94,6 +94,7 @@
     position: fixed;
     z-index: 100;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     background-color: var(--dark-background);
 }
 
