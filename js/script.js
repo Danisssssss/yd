@@ -117,7 +117,7 @@ window.onclick = function(event) {
     modalAuthorization.classList.remove('active');
   }
 
-  if (event.target == modalSocial) {
+  if (event.target.id == 'modalSocial') {
     modalSocial.classList.remove('active');
   }
 
