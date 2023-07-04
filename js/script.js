@@ -117,7 +117,7 @@ window.onclick = function(event) {
     modalAuthorization.classList.remove('active');
   }
 
-  if (event.target.id == 'modalSocial') {
+  if (event.target == modalSocial) {
     modalSocial.classList.remove('active');
   }
 
@@ -131,8 +131,6 @@ window.onclick = function(event) {
     cartPopup.classList.remove('active');
     body.classList.remove('no-scroll');
   }
-
-  body.style = "background-color: green;"
 }
 
 
