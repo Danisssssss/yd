@@ -117,7 +117,7 @@
     border-radius: 30px;
     text-transform: uppercase;
     background-color: var(--white-color);
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
 }
 
 .modal-authorization-open.active {
@@ -204,7 +204,7 @@
         top: auto;
         bottom: 100px;
         right: auto;
-        left: -150%;
+        left: -100px;
     }
     
     .modal-authorization-open.active {
