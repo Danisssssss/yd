@@ -134,140 +134,124 @@ function clickHandler(event) {
 document.addEventListener('click', clickHandler);
 
 
-// window.onclick = function(event) {
-//   if (event.target == modalAuthorization) {
-//     modalAuthorization.classList.remove('active');
-//   }
-
-//   if (event.target == modalSocial) {
-//     modalSocial.classList.remove('active');
-//   }
-
-//   if (event.target == blur) {
-//     searchPopup.classList.remove('active'); // И для самого окна
-//     blur.classList.remove('active');
-//     body.classList.remove('no-scroll');
-//   }
-
-//   if (event.target == cartPopup) {
-//     cartPopup.classList.remove('active');
-//     body.classList.remove('no-scroll');
-//   }
-// }
-
-
 // 
 // 
-// ADD TO CART
+// CART
 // 
 // 
 
 
-// Функция для сохранения элементов корзины в Local Storage
 function saveCartItemsToLocalStorage() {
-const cartItems = document.querySelectorAll('.cart-popup-item');
-const cartItemsData = [];
+  const cartItems = document.querySelectorAll('.cart-popup-item');
+  const cartItemsData = [];
 
-cartItems.forEach(cartItem => {
-  const itemInfo = cartItem.querySelector('.cart-popup-item__info');
-  const itemName = itemInfo.querySelector('.cart-popup-item__content-name').textContent;
-  const itemSize = itemInfo.querySelector('.size').textContent;
-  const itemPrice = itemInfo.querySelector('.price-item').textContent;
-  const itemCount = itemInfo.querySelector('.cart-popup-item-count').value;
+  cartItems.forEach(cartItem => {
+    const itemInfo = cartItem.querySelector('.cart-popup-item__info');
+    const itemName = itemInfo.querySelector('.cart-popup-item__content-name').textContent;
+    const itemSize = itemInfo.querySelector('.size').textContent;
+    const itemPrice = itemInfo.querySelector('.price-item').textContent;
+    const itemCount = itemInfo.querySelector('.cart-popup-item-count').value;
+    const itemImage = cartItem.querySelector('.cart-popup-item__image img');
+    const itemImageSrc = itemImage.src; // Получаем источник изображения товара
 
-  cartItemsData.push({
-    name: itemName,
-    size: itemSize,
-    price: itemPrice,
-    count: itemCount
+    cartItemsData.push({
+      name: itemName,
+      size: itemSize,
+      price: itemPrice,
+      count: itemCount,
+      imageSrc: itemImageSrc // Сохраняем источник изображения товара
+    });
   });
-});
 
-localStorage.setItem('cartItems', JSON.stringify(cartItemsData));
+  localStorage.setItem('cartItems', JSON.stringify(cartItemsData));
 }
 
 // Функция для загрузки элементов корзины из Local Storage
 function loadCartItemsFromLocalStorage() {
-const cartItemsData = localStorage.getItem('cartItems');
+  const cartItemsData = localStorage.getItem('cartItems');
 
-if (cartItemsData) {
-  const cartItems = JSON.parse(cartItemsData);
+  if (cartItemsData) {
+    const cartItems = JSON.parse(cartItemsData);
 
-  cartItems.forEach(itemData => {
-    // Создание и добавление элементов корзины на основе данных
-    const newItem = document.createElement('div');
-    newItem.classList.add('cart-popup-item');
+    cartItems.forEach(itemData => {
+      // Создание и добавление элементов корзины на основе данных
+      const newItem = document.createElement('div');
+      newItem.classList.add('cart-popup-item');
 
-    const newItemImage = document.createElement('div');
-    newItemImage.classList.add('cart-popup-item__image');
-    const newImage = document.createElement('img');
-    newImage.src = '../../images/product-page/nike-air-jordan-1-retro-high-og-skyline/1.png';
-    newImage.alt = '';
-    newItemImage.appendChild(newImage);
-    newItem.appendChild(newItemImage);
+      const newItemImage = document.createElement('div');
+      newItemImage.classList.add('cart-popup-item__image');
+      const newImage = document.createElement('img');
+      newImage.src = itemData.imageSrc; // Загружаем сохраненное изображение товара
+      newImage.alt = '';
+      newItemImage.appendChild(newImage);
+      newItem.appendChild(newItemImage);
 
-    const newItemInfo = document.createElement('div');
-    newItemInfo.classList.add('cart-popup-item__info');
+      const newItemInfo = document.createElement('div');
+      newItemInfo.classList.add('cart-popup-item__info');
 
-    const newItemName = document.createElement('h4');
-    newItemName.classList.add('cart-popup-item__content-name');
-    newItemName.textContent = itemData.name;
-    newItemInfo.appendChild(newItemName);
+      const newItemName = document.createElement('h4');
+      newItemName.classList.add('cart-popup-item__content-name');
+      newItemName.textContent = itemData.name;
+      newItemInfo.appendChild(newItemName);
 
-    const newSize = document.createElement('div');
-    newSize.classList.add('size');
-    newSize.textContent = itemData.size;
-    newItemInfo.appendChild(newSize);
+      const newSize = document.createElement('div');
+      newSize.classList.add('size');
+      newSize.textContent = itemData.size;
+      newItemInfo.appendChild(newSize);
 
-    const newPriceItem = document.createElement('p');
-    newPriceItem.style.display = 'none';
-    newPriceItem.classList.add('price-item');
-    newPriceItem.textContent = itemData.price;
-    newItemInfo.appendChild(newPriceItem);
+      const newPriceItem = document.createElement('p');
+      newPriceItem.style.display = 'none';
+      newPriceItem.classList.add('price-item');
+      newPriceItem.textContent = itemData.price;
+      newItemInfo.appendChild(newPriceItem);
 
-    const newContentPrice = document.createElement('p');
-    newContentPrice.classList.add('cart-popup-item__content-price');
-    newContentPrice.textContent = itemData.price;
-    newItemInfo.appendChild(newContentPrice);
+      const newContentPrice = document.createElement('p');
+      newContentPrice.classList.add('cart-popup-item__content-price');
+      newContentPrice.textContent = itemData.price;
+      newItemInfo.appendChild(newContentPrice);
 
-    const newCounter = document.createElement('div');
-    newCounter.classList.add('cart-popup-item-counter');
+      const newCounter = document.createElement('div');
+      newCounter.classList.add('cart-popup-item-counter');
 
-    const newMinusBtn = document.createElement('button');
-    newMinusBtn.classList.add('uil', 'uil-minus', 'cart-popup-item-counter__minus');
-    newCounter.appendChild(newMinusBtn);
+      const newMinusBtn = document.createElement('button');
+      newMinusBtn.classList.add('uil', 'uil-minus', 'cart-popup-item-counter__minus');
+      newCounter.appendChild(newMinusBtn);
 
-    const newCountInput = document.createElement('input');
-    newCountInput.classList.add('cart-popup-item-count');
-    newCountInput.type = 'number';
-    newCountInput.min = '1';
-    newCountInput.max = '10';
-    newCountInput.value = itemData.count;
-    newCounter.appendChild(newCountInput);
+      const newCountInput = document.createElement('input');
+      newCountInput.classList.add('cart-popup-item-count');
+      newCountInput.type = 'number';
+      newCountInput.min = '1';
+      newCountInput.max = '10';
+      newCountInput.value = itemData.count;
+      newCounter.appendChild(newCountInput);
 
-    const newPlusBtn = document.createElement('button');
-    newPlusBtn.classList.add('uil', 'uil-plus', 'cart-popup-item-counter__plus');
-    newCounter.appendChild(newPlusBtn);
+      const newPlusBtn = document.createElement('button');
+      newPlusBtn.classList.add('uil', 'uil-plus', 'cart-popup-item-counter__plus');
+      newCounter.appendChild(newPlusBtn);
 
-    newItemInfo.appendChild(newCounter);
+      newItemInfo.appendChild(newCounter);
 
-    const newTrashBtn = document.createElement('div');
-    newTrashBtn.classList.add('cart-popup-item-trash');
-    const newDeleteBtn = document.createElement('button');
-    newDeleteBtn.classList.add('uil', 'uil-trash');
-    newTrashBtn.appendChild(newDeleteBtn);
-    newItemInfo.appendChild(newTrashBtn);
+      const newTrashBtn = document.createElement('div');
+      newTrashBtn.classList.add('cart-popup-item-trash');
+      const newDeleteBtn = document.createElement('button');
+      newDeleteBtn.classList.add('uil', 'uil-trash');
+      newTrashBtn.appendChild(newDeleteBtn);
+      newItemInfo.appendChild(newTrashBtn);
 
-    newItem.appendChild(newItemInfo);
+      newItem.appendChild(newItemInfo);
 
-    const cartPopupWrapper = document.querySelector('.cart-popup-wrapper');
-    cartPopupWrapper.appendChild(newItem);
-  });
+      const cartPopupWrapper = document.querySelector('.cart-popup-wrapper');
+      cartPopupWrapper.appendChild(newItem);
+      
+      newCountInput.value = itemData.count;
+      updateItemPrice(newCountInput);
+    });
 
-  updateTotalPrice();
-  updateItemCount();
+    updateTotalPrice();
+    updateItemCount();
+  }
 }
-}
+
 
 const addToCartLinks = document.querySelectorAll('.add-to-cart');
 const cartPopupWrapper = document.querySelector('.cart-popup-wrapper');
@@ -279,7 +263,7 @@ addToCartLinks.forEach(addToCartLink => {
     event.preventDefault(); // Предотвращаем переход по ссылке
 
     // Получаем информацию о товаре из соответствующих элементов
-    const productImage = event.currentTarget.getAttribute('data-image');
+    const productImage = document.querySelector('.main-product-image');
     const productName = document.querySelector('.product-title-block h1');
     const sizeBlock = document.querySelector('.size-block.active');
 
@@ -295,7 +279,7 @@ addToCartLinks.forEach(addToCartLink => {
       const newItemImage = document.createElement('div');
       newItemImage.classList.add('cart-popup-item__image');
       const newImage = document.createElement('img');
-      newImage.src = productImage;
+      newImage.src = productImage.src;
       newImage.alt = '';
       newItemImage.appendChild(newImage);
       newItem.appendChild(newItemImage);
@@ -359,9 +343,7 @@ addToCartLinks.forEach(addToCartLink => {
 
       updateTotalPrice();
       updateItemCount();
-
-      // Сохраняем информацию о товаре в Local Storage
-      saveCartItemToLocalStorage(newItem);
+      saveCartItemsToLocalStorage();
     }
   });
 });
@@ -376,6 +358,7 @@ cartPopupWrapper.addEventListener('click', (event) => {
       itemCountInput.value = count;
       updateItemPrice(target);
       updateTotalPrice();
+      saveCartItemsToLocalStorage();
     }
   } else if (target.classList.contains('cart-popup-item-counter__plus')) {
     const itemCountInput = target.previousElementSibling;
@@ -385,17 +368,18 @@ cartPopupWrapper.addEventListener('click', (event) => {
       itemCountInput.value = count;
       updateItemPrice(target);
       updateTotalPrice();
+      saveCartItemsToLocalStorage();
     }
   } else if (target.classList.contains('uil-trash')) {
     const cartItem = target.closest('.cart-popup-item');
     cartItem.remove();
     updateTotalPrice();
     updateItemCount();
-    // Удаляем информацию о товаре из Local Storage
-    removeCartItemFromLocalStorage(cartItem);
+    saveCartItemsToLocalStorage();
   }
 });
 
+// ОБРАБОТКА ВВОДА
 cartPopupWrapper.addEventListener('input', (event) => {
   const target = event.target;
   if (target.classList.contains('cart-popup-item-count')) {
@@ -408,6 +392,7 @@ cartPopupWrapper.addEventListener('input', (event) => {
     target.value = count;
     updateItemPrice(target);
     updateItemCount();
+    saveCartItemsToLocalStorage();
   }
 });
 
@@ -418,160 +403,46 @@ function updateItemPrice(element) {
   const itemContentPrice = itemInfo.querySelector('.cart-popup-item__content-price');
 
   const count = parseInt(itemCountInput.value);
-  const price = parseFloat(itemPrice.textContent.replace(/\D/g, ''));
+  const price = parseFloat(itemPrice.textContent.replace(/[^\d.]/g, ''));
   const totalPrice = count * price;
 
-  itemContentPrice.textContent = totalPrice.toLocaleString() + 'р';
+  itemContentPrice.textContent = formatPrice(totalPrice) + ' Р';
 }
 
 function updateTotalPrice() {
-  const itemPrices = document.querySelectorAll('.cart-popup-item__content-price');
-  let total = 0;
+  const cartItems = document.querySelectorAll('.cart-popup-item');
+  let totalPrice = 0;
 
-  itemPrices.forEach(itemPrice => {
-    const price = parseFloat(itemPrice.textContent.replace(/\D/g, ''));
-    total += price;
+  cartItems.forEach(cartItem => {
+    const itemInfo = cartItem.querySelector('.cart-popup-item__info');
+    const itemCountInput = itemInfo.querySelector('.cart-popup-item-count');
+    const itemPrice = itemInfo.querySelector('.price-item');
+
+    const count = parseInt(itemCountInput.value);
+    const price = parseFloat(itemPrice.textContent.replace(/[^\d.]/g, ''));
+    const itemTotalPrice = count * price;
+
+    totalPrice += itemTotalPrice;
   });
 
-  finalPriceElement.textContent = total.toLocaleString() + 'р';
+  finalPriceElement.textContent = formatPrice(totalPrice) + ' Р';
 }
+
+function formatPrice(price) {
+  return price.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+
+
 
 function updateItemCount() {
   const cartItems = document.querySelectorAll('.cart-popup-item');
-  countElement.textContent = cartItems.length.toString();
+  countElement.textContent = cartItems.length;
 }
 
-function saveCartItemToLocalStorage(cartItem) {
-  const itemInfo = cartItem.querySelector('.cart-popup-item__info');
-  const itemName = itemInfo.querySelector('.cart-popup-item__content-name').textContent;
-  const itemSize = itemInfo.querySelector('.size').textContent;
-  const itemPrice = itemInfo.querySelector('.price-item').textContent;
-  const itemCount = itemInfo.querySelector('.cart-popup-item-count').value;
-  const itemImage = cartItem.querySelector('.cart-popup-item__image img').src;
-
-  const cartItemData = {
-    name: itemName,
-    size: itemSize,
-    price: itemPrice,
-    count: itemCount,
-    image: itemImage
-  };
-
-  // Получаем данные из Local Storage
-  const savedItems = localStorage.getItem('cartItems');
-
-  if (savedItems) {
-    // Если уже есть сохраненные данные, добавляем новый товар в массив
-    const cartItems = JSON.parse(savedItems);
-    cartItems.push(cartItemData);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  } else {
-    // Если данных еще нет, создаем новый массив и сохраняем в Local Storage
-    const cartItems = [cartItemData];
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }
-}
-
-function removeCartItemFromLocalStorage(cartItem) {
-  const itemInfo = cartItem.querySelector('.cart-popup-item__info');
-  const itemName = itemInfo.querySelector('.cart-popup-item__content-name').textContent;
-  const itemSize = itemInfo.querySelector('.size').textContent;
-
-  // Получаем данные из Local Storage
-  const savedItems = localStorage.getItem('cartItems');
-
-  if (savedItems) {
-    // Если есть сохраненные данные, находим и удаляем соответствующий товар из массива
-    const cartItems = JSON.parse(savedItems);
-    const index = cartItems.findIndex(item => item.name === itemName && item.size === itemSize);
-    if (index !== -1) {
-      cartItems.splice(index, 1);
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    }
-  }
-}
-
-// Восстанавливаем товары при загрузке страницы
+// Загрузка элементов корзины из Local Storage при загрузке страницы
 window.addEventListener('load', () => {
-  const savedItems = localStorage.getItem('cartItems');
-
-  if (savedItems) {
-    const cartItems = JSON.parse(savedItems);
-
-    cartItems.forEach(itemData => {
-      const newItem = document.createElement('div');
-      newItem.classList.add('cart-popup-item');
-
-      const newItemImage = document.createElement('div');
-      newItemImage.classList.add('cart-popup-item__image');
-      const newImage = document.createElement('img');
-      newImage.src = itemData.image;
-      newImage.alt = '';
-      newItemImage.appendChild(newImage);
-      newItem.appendChild(newItemImage);
-
-      const newItemInfo = document.createElement('div');
-      newItemInfo.classList.add('cart-popup-item__info');
-
-      const newItemName = document.createElement('h4');
-      newItemName.classList.add('cart-popup-item__content-name');
-      newItemName.textContent = itemData.name;
-      newItemInfo.appendChild(newItemName);
-
-      const newSize = document.createElement('div');
-      newSize.classList.add('size');
-      newSize.textContent = itemData.size;
-      newItemInfo.appendChild(newSize);
-
-      const newPriceItem = document.createElement('p');
-      newPriceItem.style.display = 'none';
-      newPriceItem.classList.add('price-item');
-      newPriceItem.textContent = itemData.price;
-      newItemInfo.appendChild(newPriceItem);
-
-      const newContentPrice = document.createElement('p');
-      newContentPrice.classList.add('cart-popup-item__content-price');
-      newContentPrice.textContent = itemData.price;
-      newItemInfo.appendChild(newContentPrice);
-
-      const newCounter = document.createElement('div');
-      newCounter.classList.add('cart-popup-item-counter');
-
-      const newMinusBtn = document.createElement('button');
-      newMinusBtn.classList.add('uil', 'uil-minus', 'cart-popup-item-counter__minus');
-      newCounter.appendChild(newMinusBtn);
-
-      const newCountInput = document.createElement('input');
-      newCountInput.classList.add('cart-popup-item-count');
-      newCountInput.type = 'number';
-      newCountInput.min = '1';
-      newCountInput.max = '10';
-      newCountInput.value = itemData.count;
-      newCounter.appendChild(newCountInput);
-
-      const newPlusBtn = document.createElement('button');
-      newPlusBtn.classList.add('uil', 'uil-plus', 'cart-popup-item-counter__plus');
-      newCounter.appendChild(newPlusBtn);
-
-      newItemInfo.appendChild(newCounter);
-
-      const newTrashBtn = document.createElement('div');
-      newTrashBtn.classList.add('cart-popup-item-trash');
-      const newDeleteBtn = document.createElement('button');
-      newDeleteBtn.classList.add('uil', 'uil-trash');
-      newTrashBtn.appendChild(newDeleteBtn);
-      newItemInfo.appendChild(newTrashBtn);
-
-      newItem.appendChild(newItemInfo);
-
-      cartPopupWrapper.appendChild(newItem);
-    });
-
-    updateTotalPrice();
-    updateItemCount();
-  }
+  loadCartItemsFromLocalStorage();
 });
-
 
 
 
@@ -592,20 +463,3 @@ phoneInputs.forEach((input)=>{
 		if (input.value == '+') input.value = '';
 	})
 });
-
-
-// // ОБРАБОТКА ВВОДА
-// cartPopupWrapper.addEventListener('input', (event) => {
-//   const target = event.target;
-//   if (target.classList.contains('cart-popup-item-count')) {
-//     let count = parseInt(target.value);
-//     if (isNaN(count) || count < 1) {
-//       count = 1;
-//     } else if (count > 10) {
-//       count = 10;
-//     }
-//     target.value = count;
-//     updateItemPrice(target);
-//     updateItemCount();
-//   }
-// });
