@@ -207,3 +207,10 @@
         grid-column-gap: 30px;
     }
 }
+
+@media only screen and (max-height: 350px) {
+    .nav-frame-list {
+        height: 45vh;
+        overflow: auto;
+    }
+}
