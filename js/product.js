@@ -110,16 +110,3 @@ function copyText(element) {
   // Удаляем временный textarea элемент
   document.body.removeChild(textarea);
 }
-
-
-
-
-const modalAuthorizationOpenBtn = document.querySelectorAll('.modal-authorization-open--btn');
-
-
-modalAuthorizationOpenBtn.forEach((button) => { // Перебираем все кнопки
-  button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
-      e.preventDefault(); // Предотвращаем дефолтное поведение браузера
-      modalAuthorization.classList.add('active');
-  })
-});
