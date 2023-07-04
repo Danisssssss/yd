@@ -131,6 +131,8 @@ window.onclick = function(event) {
     cartPopup.classList.remove('active');
     body.classList.remove('no-scroll');
   }
+
+  body.style = "background-color: green;"
 }
 
 
