@@ -96,6 +96,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     background-color: var(--dark-background);
+    cursor: pointer;
 }
 
 .blur.active {

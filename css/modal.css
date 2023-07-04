@@ -13,6 +13,7 @@
     transition: opacity .1s linear;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    cursor: pointer;
 }
 
 .modal-social.active {
@@ -138,6 +139,7 @@
     transition: opacity .1s linear;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    cursor: pointer;
 }
 
 .modal-authorization.active {
