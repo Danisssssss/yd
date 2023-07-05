@@ -1,2 +1,2 @@
 # yd
-Репозиторий для сайта yd <a href="https://danisssssss.github.io/yd" target="_blank">yd</a>
+Репозиторий для сайта YD: <a href="https://danisssssss.github.io/yd" target="_blank">YD</a>
